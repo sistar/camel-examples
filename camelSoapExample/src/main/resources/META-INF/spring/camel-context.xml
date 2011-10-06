@@ -1,0 +1,25 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:camel="http://camel.apache.org/schema/spring"
+       xmlns:cxf="http://camel.apache.org/schema/cxf"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+           http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd">
+    <!--Create a new SpringBus -->
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <!--Make sure the OSGi servlet transport is regirsted with the bus -->
+    <import resource="classpath:META-INF/cxf/osgi/cxf-extension-osgi.xml" />
+
+    <cxf:cxfEndpoint id="reportIncident"
+                     address="/sample/webservices/incident"
+                     wsdlURL="META-INF/wsdl/inventory.wsdl"
+                     serviceClass="org.apache.camel.example.reportincident.ReportIncidentEndpoint">
+    </cxf:cxfEndpoint>
+
+    <bean id="reportIncidentRoutes" class="org.example.reportincident.ReportIncidentRoutes" />
+
+    <camel:camelContext id="camel">
+    	<camel:routeBuilder ref="reportIncidentRoutes"/>
+    </camel:camelContext>
+</beans>
