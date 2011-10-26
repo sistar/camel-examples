@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+           xmlns:jaxws="http://cxf.apache.org/blueprint/jaxws"
+           xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
+           xmlns:cxf="http://cxf.apache.org/blueprint/core"
+           xmlns:camel="http://camel.apache.org/schema/blueprint"
+           xmlns:camelcxf="http://camel.apache.org/schema/blueprint/cxf"
+           xsi:schemaLocation="
+             http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+             http://cxf.apache.org/blueprint/jaxws http://cxf.apache.org/schemas/blueprint/jaxws.xsd
+             http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
+             http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd
+             http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
+             http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+             ">
+
+    <jaxrs:server id="restService"
+                  address="http://localhost:${CXFTestSupport.port2}/CxfRsRouterTest/rest"
+                  staticSubresourceResolution="true">
+        <jaxrs:serviceBeans>
+            <ref bean="incidentService"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
+
+    <bean id="repositorySetup" class="org.apache.camel.example.RepositorySetup"/>
+    <bean id="incidentService" class="org.apache.camel.example.ReportIncidentServiceResource"/>
+
+    <jaxrs:server id="rsServer" address="http://localhost:${CXFTestSupport.port1}/CxfRsRouterTest/route"
+                  serviceClass="org.apache.camel.example.ReportIncidentServiceResource"/>
+
+    <jaxrs:client id="rsClient" address="http://localhost:${CXFTestSupport.port2}/CxfRsRouterTest/rest"
+                  serviceClass="org.apache.camel.example.ReportIncidentServiceResource"/>
+
+    <camelContext id="camel" xmlns="http://camel.apache.org/schema/blueprint">
+        <route>
+            <from uri="cxfrs://bean://rsServer"/>
+
+            <setHeader headerName="CamelCxfRsUsingHttpAPI">
+                <constant>True</constant>
+            </setHeader>
+            <to uri="cxfrs://bean://rsClient"/>
+        </route>
+    </camelContext>
+</blueprint>
