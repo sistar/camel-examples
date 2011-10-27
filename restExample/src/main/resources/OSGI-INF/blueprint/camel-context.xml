@@ -15,23 +15,28 @@
              http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
              http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
              ">
-
-    <jaxrs:server id="restService"
-                  address="http://localhost:${CXFTestSupport.port2}/CxfRsRouterTest/rest"
-                  staticSubresourceResolution="true">
-        <jaxrs:serviceBeans>
-            <ref bean="incidentService"/>
-        </jaxrs:serviceBeans>
-    </jaxrs:server>
-
-
     <bean id="repositorySetup" class="org.apache.camel.example.RepositorySetup"/>
     <bean id="incidentService" class="org.apache.camel.example.ReportIncidentServiceResource"/>
 
-    <jaxrs:server id="rsServer" address="http://localhost:${CXFTestSupport.port1}/CxfRsRouterTest/route"
+    <cxf:bus>
+        <cxf:features>
+            <cxf:logging/>
+        </cxf:features>
+    </cxf:bus>
+
+    <jaxrs:server id="restService"
+                  address="http://localhost:8084/CxfRsRouterTest/rest"
+                  staticSubresourceResolution="true">
+        <jaxrs:serviceBeans>
+            <ref component-id="incidentService"/>
+        </jaxrs:serviceBeans>
+    </jaxrs:server>
+
+    <!--
+    <jaxrs:server id="rsServer" address="http://localhost:8085/CxfRsRouterTest/route"
                   serviceClass="org.apache.camel.example.ReportIncidentServiceResource"/>
 
-    <jaxrs:client id="rsClient" address="http://localhost:${CXFTestSupport.port2}/CxfRsRouterTest/rest"
+    <jaxrs:client id="rsClient" address="http://localhost:8084/CxfRsRouterTest/rest"
                   serviceClass="org.apache.camel.example.ReportIncidentServiceResource"/>
 
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/blueprint">
@@ -43,5 +48,5 @@
             </setHeader>
             <to uri="cxfrs://bean://rsClient"/>
         </route>
-    </camelContext>
+    </camelContext> -->
 </blueprint>

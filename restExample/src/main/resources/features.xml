@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features  name='restExample-${pom.version}' xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+    <feature name="restExample" version="${pom.version}">
+        <bundle>mvn:com.hazelcast/hazelcast/1.9.4.4</bundle>
+        <bundle>mvn:camel/restExample/1.0.0</bundle>
+    </feature>
+</features>
