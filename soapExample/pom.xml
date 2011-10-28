@@ -2,70 +2,97 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>camel</groupId>
+    <artifactId>soapExample</artifactId>
+    <version>1.0.0</version>
+    <name>CXF :: Camel :: OSGi :: SOAP Service</name>
+    <description>CXF Consumer using the OSGi HTTP Service</description>
+    <packaging>bundle</packaging>
     <parent>
-        <artifactId>camelServiceExampleParent</artifactId>
         <groupId>camel</groupId>
+        <artifactId>camelServiceExampleParent</artifactId>
         <version>1.0.0</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>restExample</artifactId>
-    <packaging>bundle</packaging>
+    <properties>
+        <cxf-version>2.4.1</cxf-version>
+        <camel-version>2.8.0</camel-version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-cxf</artifactId>
-        </dependency>
-            <dependency>
-  <groupId>org.apache.servicemix.bundles</groupId>
-  <artifactId>org.apache.servicemix.bundles.cglib</artifactId>
-  <version>2.1_3_7</version>
-</dependency>
-        <dependency>
-            <groupId>com.hazelcast</groupId>
-            <artifactId>hazelcast</artifactId>
-            <version>1.9.4.4</version>
-        </dependency>
-
-        <!-- test outside OSGi container -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
+            <artifactId>camel-core</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
-            <artifactId>camel-test</artifactId>
-            <scope>test</scope>
+            <artifactId>camel-cxf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-transports-http-jetty</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <!-- test -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
-
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
         <plugins>
+            <!-- CXF wsdl2java generator, will plugin to the compile goal -->
             <plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.8.0</version>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <version>${cxf-version}</version>
                 <executions>
                     <execution>
+                        <id>generate-sources</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceRoot>${basedir}/target/generated/src/main/java</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>${basedir}/src/main/resources/META-INF/wsdl/inventory.wsdl</wsdl>
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
                         <goals>
-                            <goal>generate</goal>
+                            <goal>wsdl2java</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+
             <!-- to generate the MANIFEST-FILE of the bundle -->
             <plugin>
                 <groupId>org.apache.felix</groupId>
@@ -77,8 +104,13 @@
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Export-Package>org.apache.camel.example.reportincident*</Export-Package>
                         <Import-Package>
+                            META-INF.cxf,
+                            META-INF.cxf.osgi,
                             org.apache.cxf,
                             org.apache.cxf.binding,
+                            org.apache.cxf.binding.corba,
+                            org.apache.cxf.binding.soap,
+                            org.apache.cxf.binding.soap.spring,
                             org.apache.cxf.bus,
                             org.apache.cxf.bus.resource,
                             org.apache.cxf.bus.spring,
@@ -100,54 +132,17 @@
                             org.apache.cxf.transport.jms,
                             org.apache.cxf.transports.http,
                             org.apache.cxf.workqueue,
+                            org.apache.cxf.wsdl,
+                            org.apache.cxf.wsdl11,
                             org.apache.ws.security.action,
                             org.apache.ws.security.processor,
-                            org.apache.cxf.jaxrs.client,
                             org.springframework.beans.factory.config,
                             org.springframework.mail.javamail,
                             org.apache.camel.example.reportincident,
-                            net.sf.cglib.*,
-                            net.sf.cglib.core,
-                            net.sf.cglib.proxy,
                             *
                         </Import-Package>
                     </instructions>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>filter</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                            <goal>resources</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>attach-artifacts</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>attach-artifact</goal>
-                        </goals>
-                        <configuration>
-                            <artifacts>
-                                <artifact>
-                                    <file>target/classes/features.xml</file>
-                                    <type>xml</type>
-                                    <classifier>features</classifier>
-                                </artifact>
-                            </artifacts>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

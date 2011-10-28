@@ -32,12 +32,12 @@
         </jaxrs:serviceBeans>
     </jaxrs:server>
 
-    <!--
+
     <jaxrs:server id="rsServer" address="http://localhost:8085/CxfRsRouterTest/route"
-                  serviceClass="org.apache.camel.example.ReportIncidentServiceResource"/>
+                  serviceClass="org.apache.camel.example.ReportIncidentServiceDummyResource"/>
 
     <jaxrs:client id="rsClient" address="http://localhost:8084/CxfRsRouterTest/rest"
-                  serviceClass="org.apache.camel.example.ReportIncidentServiceResource"/>
+                  serviceClass="org.apache.camel.example.ReportIncidentServiceDummyResource"/>
 
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/blueprint">
         <route>
@@ -48,5 +48,5 @@
             </setHeader>
             <to uri="cxfrs://bean://rsClient"/>
         </route>
-    </camelContext> -->
+    </camelContext>
 </blueprint>

@@ -56,7 +56,7 @@ public class ReportIncidentRoutesClientTest extends CamelSpringTestSupport {
         out = client.reportIncident(input);
         // assert we got a Accept back
         assertEquals("accepted", out.getCode());
-        while (true){Thread.sleep(1000);}
+        //while (true){Thread.sleep(1000);}
     }
 
     @Override
