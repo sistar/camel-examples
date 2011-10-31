@@ -109,6 +109,7 @@
                             net.sf.cglib.*,
                             net.sf.cglib.core,
                             net.sf.cglib.proxy,
+                            net.sf.cglib.reflect,
                             *
                         </Import-Package>
                     </instructions>

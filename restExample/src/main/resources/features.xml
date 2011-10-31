@@ -6,6 +6,8 @@
         <feature>cxf</feature>
         <bundle>mvn:org.apache.camel/camel-core/2.8.2</bundle>
         <bundle>mvn:org.fusesource.commonman/commons-management/1.0</bundle>
+        <bundle>mvn:org.apache.camel/camel-cxf-transport/2.8.2</bundle>
+        <bundle>mvn:org.apache.camel/camel-spring/2.8.2</bundle>
         <bundle>mvn:org.apache.camel/camel-cxf/2.8.2</bundle>
         <bundle>mvn:org.apache.camel/camel-blueprint/2.8.2</bundle>
         <bundle>mvn:com.hazelcast/hazelcast/1.9.4.4</bundle>
