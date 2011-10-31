@@ -1,6 +1,0 @@
-<features xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-    <feature name="rest-example" version="1.0.0">
-        <bundle>mvn:com.hazelcast/hazelcast/1.9.4.4</bundle>
-        <bundle>mvn:camel/restExample/1.0.0</bundle>
-    </feature>
-</features>
