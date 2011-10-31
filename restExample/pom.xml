@@ -17,11 +17,7 @@
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf</artifactId>
         </dependency>
-            <dependency>
-  <groupId>org.apache.servicemix.bundles</groupId>
-  <artifactId>org.apache.servicemix.bundles.cglib</artifactId>
-  <version>2.1_3_7</version>
-</dependency>
+
         <dependency>
             <groupId>com.hazelcast</groupId>
             <artifactId>hazelcast</artifactId>
@@ -106,6 +102,15 @@
                             org.springframework.beans.factory.config,
                             org.springframework.mail.javamail,
                             org.apache.camel.example.reportincident,
+                            com.hazelcast.cluster,
+                            com.hazelcast.config,
+                            com.hazelcast.core,
+                            com.hazelcast.logging,
+                            com.hazelcast.monitor,
+                            com.hazelcast.nio,
+                            com.hazelcast.partition,
+                            com.hazelcast.query,
+                            com.hazelcast.util,
                             net.sf.cglib.*,
                             net.sf.cglib.core,
                             net.sf.cglib.proxy,

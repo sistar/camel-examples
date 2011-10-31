@@ -86,7 +86,6 @@
     <orderEntry type="library" name="Maven: org.apache.aries.proxy:org.apache.aries.proxy.api:0.3" level="project" />
     <orderEntry type="library" name="Maven: javax.xml.bind:jaxb-api:2.1" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.servicemix.bundles:org.apache.servicemix.bundles.cglib:2.1_3_7" level="project" />
     <orderEntry type="library" name="Maven: com.hazelcast:hazelcast:1.9.4.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.9" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
