@@ -6,11 +6,12 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.example.reportincident.InputReportIncident;
 import org.apache.camel.example.reportincident.OutputReportIncident;
 import org.apache.cxf.message.MessageContentsList;
+import org.apache.cxf.transport.http.HTTPException;
 
 public class ReportIncidentClientRoutes extends RouteBuilder {
 
-	private static final String URL_PART_A = "http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident";
-	private static final String URL_PART_B = "http://localhost:8182/cxf/camel-example-cxf-osgi/webservices/incident";
+	private static final String URL_PART_A = "http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incidentA";
+	private static final String URL_PART_B = "http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incidentB";
 	public static final String SERVICE_CLASS = "org.apache.camel.example.reportincident.ReportIncidentEndpoint";
 
 	@Override
@@ -37,15 +38,18 @@ public class ReportIncidentClientRoutes extends RouteBuilder {
 						inputReportIncident.getSummary());
 			}
 		};
+
+		from("cxf:bean:reportIncident").to("direct:toWs");
 		from("direct:toWs").routeId("invocationDecision")
 				.process(requestProcessor).choice()
 				.when(header("partner").isEqualTo("partnerA"))
 				.to("direct:partnerA")
 				.when(header("partner").isEqualTo("partnerB"))
 				.to("direct:partnerB");
-		from("direct:partnerA").to(
-				"cxf://" + URL_PART_A + "?serviceClass=" + SERVICE_CLASS).to(
-				"direct:wsResponse");
+		from("direct:partnerA").routeId("invokeA").doTry()
+				.to("cxf://" + URL_PART_A + "?serviceClass=" + SERVICE_CLASS)
+				.to("direct:wsResponse").doCatch(HTTPException.class)
+				.to("direct:errorHandling");
 		from("direct:partnerB").to(
 				"cxf://" + URL_PART_B + "?serviceClass=" + SERVICE_CLASS).to(
 				"direct:wsResponse");

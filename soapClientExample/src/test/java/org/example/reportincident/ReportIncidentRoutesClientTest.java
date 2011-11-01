@@ -2,6 +2,8 @@ package org.example.reportincident;
 
 import static org.hamcrest.CoreMatchers.is;
 
+import java.net.URL;
+
 import org.apache.camel.EndpointInject;
 import org.apache.camel.Exchange;
 import org.apache.camel.ExchangePattern;
@@ -17,6 +19,7 @@ import org.apache.camel.example.reportincident.OutputReportIncident;
 import org.apache.camel.impl.DefaultExchange;
 import org.apache.camel.test.junit4.CamelSpringTestSupport;
 import org.apache.cxf.message.MessageContentsList;
+import org.apache.cxf.transport.http.HTTPException;
 import org.junit.Test;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -40,6 +43,12 @@ public class ReportIncidentRoutesClientTest extends CamelSpringTestSupport {
 
 	@EndpointInject(uri = "mock:statusNotOK")
 	protected MockEndpoint statusNotOK;
+
+	@EndpointInject(uri = "mock:errorHandling")
+	protected MockEndpoint errorHandling;
+
+	@EndpointInject(uri = "mock:error")
+	protected MockEndpoint error;
 
 	@Test
 	public void testDecideIncidentEndpoints() throws Exception {
@@ -92,6 +101,30 @@ public class ReportIncidentRoutesClientTest extends CamelSpringTestSupport {
 		assertMockEndpointsSatisfied();
 	}
 
+	@Test
+	public void testErrorHandling() throws Exception {
+		context.getRouteDefinition("resultDecision").adviceWith(context,
+				createRouteBuilderResultDecision());
+		context.getRouteDefinition("invokeA").adviceWith(context,
+				createRouteBuilderErrorHandling());
+		error.whenAnyExchangeReceived(new Processor() {
+
+			@Override
+			public void process(Exchange exchange) throws Exception {
+				throw new HTTPException(
+						404,
+						"partnerA not available",
+						new URL(
+								"http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incidentA"));
+
+			}
+		});
+		template.send(createSenderExchange(TestData
+				.createInputParameterPartnerA()));
+		errorHandling.expectedMessageCount(1);
+		assertMockEndpointsSatisfied();
+	}
+
 	@Override
 	protected AbstractApplicationContext createApplicationContext() {
 		return new ClassPathXmlApplicationContext(
@@ -107,6 +140,21 @@ public class ReportIncidentRoutesClientTest extends CamelSpringTestSupport {
 						.skipSendToOriginalEndpoint().to("mock:statusOK");
 				interceptSendToEndpoint("direct:statusNotOK")
 						.skipSendToOriginalEndpoint().to("mock:statusNotOK");
+			}
+		};
+
+	}
+
+	private RouteBuilder createRouteBuilderErrorHandling() throws Exception {
+		return new RouteBuilder() {
+
+			@Override
+			public void configure() throws Exception {
+				interceptSendToEndpoint("direct:errorHandling")
+						.skipSendToOriginalEndpoint().to("mock:errorHandling");
+				interceptSendToEndpoint(
+						"cxf://http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incidentA?serviceClass=org.apache.camel.example.reportincident.ReportIncidentEndpoint")
+						.skipSendToOriginalEndpoint().to("mock:error");
 			}
 		};
 
