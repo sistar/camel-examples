@@ -13,7 +13,6 @@
              http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
              http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd
              http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
-             http://camel.apache.org/schema/blueprint/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
              ">
     <bean id="repositorySetup" class="org.apache.camel.example.RepositorySetup"/>
     <bean id="incidentService" class="org.apache.camel.example.ReportIncidentServiceResource"/>
@@ -33,10 +32,10 @@
     </jaxrs:server>
 
 
-    <jaxrs:server id="rsServer" address="http://localhost:8085/CxfRsRouterTest/route"
+    <camelcxf:rsServer id="rsServer" address="http://localhost:8085/CxfRsRouterTest/route"
                   serviceClass="org.apache.camel.example.ReportIncidentServiceDummyResource"/>
 
-    <jaxrs:client id="rsClient" address="http://localhost:8084/CxfRsRouterTest/rest"
+    <camelcxf:rsClient id="rsClient" address="http://localhost:8084/CxfRsRouterTest/rest"
                   serviceClass="org.apache.camel.example.ReportIncidentServiceDummyResource"/>
 
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/blueprint">
