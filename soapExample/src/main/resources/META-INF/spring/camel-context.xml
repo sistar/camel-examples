@@ -12,7 +12,7 @@
     <import resource="classpath:META-INF/cxf/osgi/cxf-extension-osgi.xml" />
 
     <cxf:cxfEndpoint id="reportIncident"
-                     address="/sample/webservices/incident"
+                     address="http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident"
                      wsdlURL="META-INF/wsdl/inventory.wsdl"
                      serviceClass="org.apache.camel.example.reportincident.ReportIncidentEndpoint">
     </cxf:cxfEndpoint>
