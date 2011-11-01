@@ -15,6 +15,7 @@ public class ReportIncidentClientRoutes extends RouteBuilder {
 
 	@Override
 	public void configure() throws Exception {
+
 		Processor resultProcessor = new Processor() {
 			public void process(Exchange exchange) throws Exception {
 				MessageContentsList messageContentsList = (MessageContentsList) exchange
@@ -22,28 +23,38 @@ public class ReportIncidentClientRoutes extends RouteBuilder {
 				OutputReportIncident outputReportIncident = (OutputReportIncident) messageContentsList
 						.get(0);
 				log.info("status code: " + outputReportIncident.getCode());
+				exchange.getIn().setHeader("statusCode",
+						outputReportIncident.getCode());
 				exchange.getIn().setBody(outputReportIncident);
+				System.out.println("wasHERE");
 			}
 		};
 
-		from("direct:toWs")
-				.routeId("decision")
-				.process(new Processor() {
-					public void process(Exchange exchange) throws Exception {
-						InputReportIncident inputReportIncident = (InputReportIncident) exchange
-								.getIn().getBody();
-						exchange.getIn().setHeader("partner",
-								inputReportIncident.getSummary());
-					}
-				}).choice().when(header("partner").isEqualTo("partnerA"))
+		Processor requestProcessor = new Processor() {
+			public void process(Exchange exchange) throws Exception {
+				InputReportIncident inputReportIncident = (InputReportIncident) exchange
+						.getIn().getBody();
+				exchange.getIn().setHeader("partner",
+						inputReportIncident.getSummary());
+			}
+		};
+		from("direct:toWs").routeId("invocationDecision")
+				.process(requestProcessor).choice()
+				.when(header("partner").isEqualTo("partnerA"))
 				.to("direct:partnerA")
 				.when(header("partner").isEqualTo("partnerB"))
 				.to("direct:partnerB");
-		from("direct:partnerA")
-				.to("cxf://" + URL_PART_A + "?serviceClass=" + SERVICE_CLASS)
-				.process(resultProcessor).to("direct:wsResponse");
-		from("direct:partnerB")
-				.to("cxf://" + URL_PART_B + "?serviceClass=" + SERVICE_CLASS)
-				.process(resultProcessor).to("direct:wsResponse");
+		from("direct:partnerA").to(
+				"cxf://" + URL_PART_A + "?serviceClass=" + SERVICE_CLASS).to(
+				"direct:wsResponse");
+		from("direct:partnerB").to(
+				"cxf://" + URL_PART_B + "?serviceClass=" + SERVICE_CLASS).to(
+				"direct:wsResponse");
+		from("direct:wsResponse").routeId("resultDecision")
+				.process(resultProcessor).choice()
+				.when(header("statusCode").isEqualTo("ok"))
+				.to("direct:statusOK")
+				.when(header("statusCode").isEqualTo("notOK"))
+				.to("direct:statusNotOK");
 	}
 }
