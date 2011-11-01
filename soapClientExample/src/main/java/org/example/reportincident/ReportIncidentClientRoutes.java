@@ -26,7 +26,6 @@ public class ReportIncidentClientRoutes extends RouteBuilder {
 				exchange.getIn().setHeader("statusCode",
 						outputReportIncident.getCode());
 				exchange.getIn().setBody(outputReportIncident);
-				System.out.println("wasHERE");
 			}
 		};
 
