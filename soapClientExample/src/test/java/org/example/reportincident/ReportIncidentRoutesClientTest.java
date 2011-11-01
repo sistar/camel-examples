@@ -191,7 +191,9 @@ public class ReportIncidentRoutesClientTest extends CamelSpringTestSupport {
 	private Exchange createSenderExchange(InputReportIncident body) {
 		Exchange senderExchange = new DefaultExchange(context,
 				ExchangePattern.InOut);
-		senderExchange.getIn().setBody(body);
+		MessageContentsList messageContents = new MessageContentsList();
+		messageContents.add(body);
+		senderExchange.getIn().setBody(messageContents);
 		senderExchange.getIn().setHeader(CxfConstants.OPERATION_NAME,
 				"ReportIncident");
 		return senderExchange;

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="soapClientExample" resourceRoot="" soapui-version="4.0.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="ReportIncidentBinding" type="wsdl" bindingName="{http://reportincident.example.camel.apache.org}ReportIncidentBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident?wsdl"><con:part><con:url>http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://reportincident.example.camel.apache.org" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://reportincident.example.camel.apache.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://reportincident.example.camel.apache.org">
+      <xs:element name="inputReportIncident">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="incidentId" type="xs:string"/>
+            <xs:element name="incidentDate" type="xs:string"/>
+            <xs:element name="givenName" type="xs:string"/>
+            <xs:element name="familyName" type="xs:string"/>
+            <xs:element name="summary" type="xs:string"/>
+            <xs:element name="details" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="outputReportIncident">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="inputReportIncident">
+    <wsdl:part element="tns:inputReportIncident" name="in"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="outputReportIncident">
+    <wsdl:part element="tns:outputReportIncident" name="out"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ReportIncidentEndpoint">
+    <wsdl:operation name="ReportIncident">
+      <wsdl:input message="tns:inputReportIncident"></wsdl:input>
+      <wsdl:output message="tns:outputReportIncident"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReportIncidentBinding" type="tns:ReportIncidentEndpoint">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ReportIncident">
+      <soap:operation soapAction="http://reportincident.example.camel.apache.org/ReportIncident" style="document"/>
+      <wsdl:input>
+        <soap:body parts="in" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="out" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReportIncidentEndpointService">
+    <wsdl:port binding="tns:ReportIncidentBinding" name="ReportIncidentService">
+      <soap:address location="http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://reportincident.example.camel.apache.org/ReportIncident" name="ReportIncident" bindingOperationName="ReportIncident" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rep="http://reportincident.example.camel.apache.org">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rep:inputReportIncident>
+         <incidentId>1234</incidentId>
+         <incidentDate>2011-11-01</incidentDate>
+         <givenName>Christoph</givenName>
+         <familyName>Ortmann</familyName>
+         <summary>partnerA</summary>
+         <details>Details</details>
+         <email>cor@opitz-consulting.com</email>
+         <phone>0049 40 7411220</phone>
+      </rep:inputReportIncident>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://reportincident.example.camel.apache.org/ReportIncident"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="soapClientExampleTests"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="testReportIncident" searchProperties="true" id="c1e97911-79a6-40b7-ad22-0b7ce97124e6"><con:settings/><con:testStep type="request" name="ReportIncident - partnerA"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ReportIncidentBinding</con:interface><con:operation>ReportIncident</con:operation><con:request name="ReportIncident - partnerA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rep="http://reportincident.example.camel.apache.org">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rep:inputReportIncident>
+         <incidentId>1234</incidentId>
+         <incidentDate>2011-11-01</incidentDate>
+         <givenName>Christoph</givenName>
+         <familyName>Ortmann</familyName>
+         <summary>partnerA</summary>
+         <details>Details</details>
+         <email>cor@opitz-consulting.com</email>
+         <phone>0049 40 7411220</phone>
+      </rep:inputReportIncident>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:assertion type="XPath Match" name="returncode notOK"><con:configuration><path>declare namespace ns2='http://reportincident.example.camel.apache.org';
+//ns2:outputReportIncident/code/text()</path><content>notOK</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://reportincident.example.camel.apache.org/ReportIncident"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="ReportIncident - partnerB"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ReportIncidentBinding</con:interface><con:operation>ReportIncident</con:operation><con:request name="ReportIncident - partnerB" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rep="http://reportincident.example.camel.apache.org">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rep:inputReportIncident>
+         <incidentId>1234</incidentId>
+         <incidentDate>2011-11-01</incidentDate>
+         <givenName>Christoph</givenName>
+         <familyName>Ortmann</familyName>
+         <summary>partnerB</summary>
+         <details>Details</details>
+         <email>cor@opitz-consulting.com</email>
+         <phone>0049 40 7411220</phone>
+      </rep:inputReportIncident>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" name="SOAP Response"/><con:assertion type="Schema Compliance" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="SOAP Fault Assertion" name="Not SOAP Fault"/><con:assertion type="XPath Match" name="returncode ok"><con:configuration><path>declare namespace ns2='http://reportincident.example.camel.apache.org';
+//ns2:outputReportIncident/code/text()</path><content>ok</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://reportincident.example.camel.apache.org/ReportIncident"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>

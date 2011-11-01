@@ -32,12 +32,19 @@ public class ReportIncidentClientRoutes extends RouteBuilder {
 
 		Processor requestProcessor = new Processor() {
 			public void process(Exchange exchange) throws Exception {
-				InputReportIncident inputReportIncident = (InputReportIncident) exchange
+				MessageContentsList messageContentsList = (MessageContentsList) exchange
 						.getIn().getBody();
+				InputReportIncident inputReportIncident = (InputReportIncident) messageContentsList
+						.get(0);
 				exchange.getIn().setHeader("partner",
 						inputReportIncident.getSummary());
 			}
 		};
+
+		OutputReportIncident outOK = new OutputReportIncident();
+		outOK.setCode("ok");
+		OutputReportIncident outNotOK = new OutputReportIncident();
+		outNotOK.setCode("notOK");
 
 		from("cxf:bean:reportIncident").to("direct:toWs");
 		from("direct:toWs").routeId("invocationDecision")
@@ -59,5 +66,7 @@ public class ReportIncidentClientRoutes extends RouteBuilder {
 				.to("direct:statusOK")
 				.when(header("statusCode").isEqualTo("notOK"))
 				.to("direct:statusNotOK");
+		from("direct:statusOK").transform(constant(outNotOK));
+		from("direct:statusNotOK").transform(constant(outOK));
 	}
 }
