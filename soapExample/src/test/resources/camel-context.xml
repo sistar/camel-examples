@@ -8,8 +8,13 @@
            http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd">
 
 
-    <cxf:cxfEndpoint id="reportIncident"
-                     address="http://localhost:8181/cxf/camel-example-cxf-osgi/webservices/incident"
+    <cxf:cxfEndpoint id="reportIncidentA"
+                     address="http://localhost:8182/cxf/camel-example-cxf-osgi/webservices/incidentA"
+                     wsdlURL="META-INF/wsdl/inventory.wsdl"
+                     serviceClass="org.apache.camel.example.reportincident.ReportIncidentEndpoint">
+    </cxf:cxfEndpoint>
+    <cxf:cxfEndpoint id="reportIncidentB"
+                     address="http://localhost:8182/cxf/camel-example-cxf-osgi/webservices/incidentB"
                      wsdlURL="META-INF/wsdl/inventory.wsdl"
                      serviceClass="org.apache.camel.example.reportincident.ReportIncidentEndpoint">
     </cxf:cxfEndpoint>
