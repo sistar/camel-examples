@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features  name='restExample-${pom.version}' xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
     <repository>mvn:org.apache.camel.karaf/apache-camel/2.8.2/xml/features</repository>
-    <repository>mvn:org.apache.cxf.karaf/apache-cxf/2.4.3/xml/features</repository>
     <feature name="restExample" version="${pom.version}">
-        <feature>cxf</feature>
-        <bundle>mvn:org.apache.camel/camel-core/2.8.2</bundle>
-        <bundle>mvn:org.fusesource.commonman/commons-management/1.0</bundle>
-        <bundle>mvn:org.apache.camel/camel-cxf-transport/2.8.2</bundle>
-        <!--<bundle>mvn:org.apache.camel/camel-spring/2.8.2</bundle>-->
-        <bundle>mvn:org.apache.camel/camel-cxf/2.8.2</bundle>
-        <bundle>mvn:org.apache.camel/camel-blueprint/2.8.2</bundle>
+        <feature>camel</feature>
+        <feature>camel-cxf</feature>
+        <feature>camel-blueprint</feature>
         <bundle>mvn:com.hazelcast/hazelcast/1.9.4.4</bundle>
+        <bundle>mvn:org.fusesource.commonman/commons-management/1.0</bundle>
         <bundle>mvn:camel/restExample/1.0.0</bundle>
     </feature>
 </features>

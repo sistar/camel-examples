@@ -17,3 +17,4 @@ features:install restExample
 http://localhost:8084/CxfRsRouterTest/rest/incidents
 
 
+RestClient.get "http://localhost:8084/CxfRsRouterTest/rest/incidents/"

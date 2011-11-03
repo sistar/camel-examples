@@ -19,18 +19,7 @@
         <property name="location" value="project.properties"/>
     </bean>
 
-    <!-- Defined the real JAXRS back end service  -->
-    <jaxrs:server id="restService"
-                  address="http://localhost:${CXFTestSupport.port2}/CxfRsRouterTest/rest"
-                  staticSubresourceResolution="true">
-        <jaxrs:serviceBeans>
-            <ref bean="incidentService"/>
-        </jaxrs:serviceBeans>
-    </jaxrs:server>
 
-    <!--  bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.JSONProvider"/-->
-    <bean id="repositorySetup" class="org.apache.camel.example.RepositorySetup"/>
-    <bean id="incidentService" class="org.apache.camel.example.ReportIncidentServiceResource"/>
 
     <!-- Defined the server endpoint to create the cxf-rs consumer -->
     <cxf:rsServer id="rsServer" address="http://localhost:${CXFTestSupport.port1}/CxfRsRouterTest/route"
@@ -44,7 +33,7 @@
     <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
         <route>
             <from uri="cxfrs://bean://rsServer"/>
-            <!-- We can remove this configure as the CXFRS producer is using the HttpAPI by default -->
+            <!--  HttpAPI is default -->
             <setHeader headerName="CamelCxfRsUsingHttpAPI">
                 <constant>True</constant>
             </setHeader>

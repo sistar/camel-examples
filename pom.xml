@@ -14,10 +14,74 @@
         <module>soapClientExample</module>
         <module>restExample</module>
     </modules>
+    <repositories>
+        <!-- Apache snapshots -->
+        <repository>
+            <id>apache-snapshots</id>
+            <name>Apache Snapshots Repository</name>
+            <url>http://repository.apache.org/content/groups/snapshots-group</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <!-- ServiceMix repo -->
+        <repository>
+            <id>servicemix</id>
+            <name>Apache ServiceMix Repository</name>
+            <url>http://svn.apache.org/repos/asf/servicemix/m2-repo</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>sonatype</id>
+            <name>sonatype</name>
+            <url>http://repository.sonatype.org/content/groups/sonatype-public-grid</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <!-- Fusesource repo -->
+        <repository>
+            <id>fusesource.snapshots</id>
+            <name>FuseSource snapshot repository</name>
+            <url>http://repo.fusesource.com/nexus/content/repositories/snapshots</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <!-- OPS4J SNAPSHOT repository -->
+        <repository>
+            <id>ops4j.sonatype.snapshots.deploy</id>
+            <name>OPS4J snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/ops4j-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
     <properties>
         <cxf-version>2.4.1</cxf-version>
         <camel-version>2.8.2</camel-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <pax.exam.version>1.2.4</pax.exam.version>
+        <karaf.version>2.2.4</karaf.version>
+
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -76,7 +140,79 @@
                 <version>4.9</version>
                 <scope>test</scope>
             </dependency>
+            <dependency>
+                <groupId>org.xmlmatchers</groupId>
+                <artifactId>xml-matchers</artifactId>
+                <version>0.10</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- Pax-Exam dependencies -->
+
+            <dependency>
+                <groupId>org.ops4j.pax.exam</groupId>
+                <artifactId>pax-exam</artifactId>
+                <version>${pax.exam.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.exam</groupId>
+                <artifactId>pax-exam-junit</artifactId>
+                <version>${pax.exam.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.exam</groupId>
+                <artifactId>pax-exam-container-default</artifactId>
+                <version>${pax.exam.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.ops4j.pax.exam</groupId>
+                <artifactId>pax-exam-junit-extender-impl</artifactId>
+                <version>${pax.exam.version}</version>
+            </dependency>
+            <!-- Apache Felix Karaf integration -->
+            <dependency>
+                <groupId>org.apache.karaf.tooling</groupId>
+                <artifactId>org.apache.karaf.tooling.testing</artifactId>
+                <version>${karaf.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
-    
+    <dependencies> <!-- Pax-Exam dependencies -->
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-container-default</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam-junit-extender-impl</artifactId>
+        </dependency>
+        <!-- Apache Felix Karaf integration -->
+        <dependency>
+            <groupId>org.apache.karaf.tooling</groupId>
+            <artifactId>org.apache.karaf.tooling.testing</artifactId>
+            <version>${karaf.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.10</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.karaf.tooling</groupId>
+                <artifactId>karaf-maven-plugin</artifactId>
+                <version>3.0.0-SNAPSHOT</version>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

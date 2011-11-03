@@ -1,38 +1,42 @@
 package org.apache.camel.example;
 
-import com.hazelcast.core.Hazelcast;
 import org.apache.camel.example.reportincident.Incident;
 import org.apache.camel.example.reportincident.Incidents;
 import org.apache.camel.example.reportincident.OutputReportIncident;
-import org.apache.cxf.jaxrs.impl.ResponseBuilderImpl;
+import org.apache.cxf.jaxrs.model.wadl.ElementClass;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.ext.MessageBodyWriter;
+import javax.ws.rs.ext.Providers;
+import java.lang.annotation.Annotation;
 import java.util.Collection;
 import java.util.Map;
 
 @Path("/incidents")
 public class ReportIncidentServiceResource {
 
-    Map<String, Incident> incidentRepository = Hazelcast.getMap("incidents");
+    @Context
+    Providers providers;
 
+    Map<String, Incident> incidentRepository;
+    private final IncidentBusinessRules incidentBusinessRules = new IncidentBusinessRules();
 
     @GET
     @Path("/")
-    public Response getIncidents() {
-        javax.ws.rs.core.Response.ResponseBuilder responseBuilder = new ResponseBuilderImpl();
+    @ElementClass(response = Incidents.class)
+    @Produces("application/xml")
+    public Incidents getIncidents() {
         Collection<Incident> incidents = incidentRepository.values();
-        responseBuilder.status(Response.Status.OK);
-        responseBuilder.entity(wrapIncidents(incidents));
-        return responseBuilder.build();
+        return wrapIncidents(incidents);
     }
+
 
     private Incidents wrapIncidents(Collection<Incident> incidentsList) {
         Incidents incidents = new Incidents();
-        for(Incident incident : incidentsList){
+        for (Incident incident : incidentsList) {
             incidents.getIncident().add(incident);
         }
         return incidents;
@@ -40,25 +44,74 @@ public class ReportIncidentServiceResource {
 
     @GET
     @Path("/{id}")
-    public Response getIncident(@PathParam("id") String id) {
-        javax.ws.rs.core.Response.ResponseBuilder responseBuilder = new ResponseBuilderImpl();
+    @ElementClass(response = Incident.class)
+    @Produces("application/xml")
+    public Incident getIncident(@PathParam("id") String id) {
         Incident incident = incidentRepository.get(id);
-        if (incident != null) {
-            responseBuilder.status(Response.Status.OK);
-            responseBuilder.entity(incident);
-        } else {
-            responseBuilder.status(Response.Status.NOT_FOUND);
+        if (incident == null) {
+            throw new WebApplicationException(Response.Status.NOT_FOUND);
         }
-
-        return responseBuilder.build();
+        return incident;
     }
 
     @PUT
     @Path("/")
-    public Response updateIncident(Incident incident) {
-        javax.ws.rs.core.Response.ResponseBuilder responseBuilder = new ResponseBuilderImpl();
-        responseBuilder.status(Response.Status.OK);
-        responseBuilder.entity(new OutputReportIncident());
-        return responseBuilder.build();
+    @Produces("application/xml")
+    @Consumes("application/xml")
+    @ElementClass(request = Incident.class, response = OutputReportIncident.class)
+    public OutputReportIncident updateIncident(Incident incident) {
+        if (incident.getStatus() == null) {
+            MessageBodyWriter<Incident> mbw = providers.getMessageBodyWriter(Incident.class, Incident.class, new Annotation[0], MediaType.APPLICATION_XML_TYPE);
+            throw new WebApplicationException(Response.status(Response.Status.BAD_REQUEST).entity(incident).build());
+        }
+        incidentRepository.put(incident.getIncidentId(), incident);
+        return new OutputReportIncident();
+    }
+
+    final static Response METHOD_NOT_ALLOWED = Response.status(new Response.StatusType() {
+        public int getStatusCode() {
+            return 405;
+        }
+
+        public Response.Status.Family getFamily() {
+            return Response.Status.Family.CLIENT_ERROR;
+        }
+
+        public String getReasonPhrase() {
+            return "Method not Allowed";
+        }
+    }).build();
+
+
+    @DELETE
+    @Path("/{id}")
+    public Response deleteIncident(@PathParam("id") String id) throws WebApplicationException {
+        if (incidentRepository.containsKey(id)) {
+            Incident incident = incidentRepository.get(id);
+
+            if (incidentBusinessRules.removeAllowed(incident)) {
+                incidentRepository.remove(id);
+            } else {
+                // Only open Incidents can be deleted
+                throw new WebApplicationException(METHOD_NOT_ALLOWED);
+            }
+            return Response.noContent().build();
+        } else {
+            throw new WebApplicationException(Response.Status.NOT_FOUND);
+        }
+    }
+
+    private boolean removeAllowed(Incident incident) {
+        return incidentBusinessRules.removeAllowed(incident);
+    }
+
+    public Map<String, Incident> getIncidentRepository() {
+        return incidentRepository;
+    }
+
+    public void setIncidentRepository(Map<String, Incident> incidentRepository) {
+        this.incidentRepository = incidentRepository;
     }
 }
+
+

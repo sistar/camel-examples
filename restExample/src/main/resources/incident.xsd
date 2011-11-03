@@ -12,6 +12,14 @@
             <xs:element type="xs:string" name="details"/>
             <xs:element type="xs:string" name="email"/>
             <xs:element type="xs:string" name="phone"/>
+            <xs:element name="status">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="open"/>
+                        <xs:enumeration value="fixed"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
@@ -26,6 +34,14 @@
                 <xs:element type="xs:string" name="details"/>
                 <xs:element type="xs:string" name="email"/>
                 <xs:element type="xs:string" name="phone"/>
+                <xs:element name="status">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="open"/>
+                            <xs:enumeration value="fixed"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -37,7 +53,6 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
 
 
     <xs:element name="outputReportIncident">
