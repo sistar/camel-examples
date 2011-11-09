@@ -7,12 +7,13 @@
     <artifactId>soapClientExample</artifactId>
     <version>1.0.0</version>
     <name>CXF :: Client :: Camel :: OSGi</name>
-    <description>CXF Producer</description>
+    <url>https://github.com/sistar/camel-examples</url>
+    <description>asynchronous CXF Producer Endpoint demonstrating Karaf OSGi</description>
     <packaging>bundle</packaging>
 
     <properties>
-        <cxf-version>2.4.3</cxf-version>
-        <camel-version>2.8.2</camel-version>
+        <cxf.version>2.4.3</cxf.version>
+        <camel.version>2.8.2</camel.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -20,32 +21,32 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-core</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-cxf</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-core</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-transports-http</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-transports-http-jetty</artifactId>
-            <version>${cxf-version}</version>
+            <version>${cxf.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- logging -->
@@ -63,7 +64,7 @@
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-test</artifactId>
-            <version>${camel-version}</version>
+            <version>${camel.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -79,7 +80,7 @@
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-codegen-plugin</artifactId>
-				<version>${cxf-version}</version>
+				<version>${cxf.version}</version>
 				<executions>
 					<execution>
 						<id>generate-sources</id>

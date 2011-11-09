@@ -3,14 +3,13 @@ package org.apache.camel.example;
 import com.hazelcast.config.*;
 import com.hazelcast.core.Hazelcast;
 import org.apache.camel.example.reportincident.Incident;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
-@Service
+
 public class RepositorySetup implements Map<String, Incident> {
     Map<String, Incident> incidentRepository=Hazelcast.getMap("incidents");
 

@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.camel.example.itests;
+package camel.business.impl;
 
 import static org.apache.karaf.testing.Helper.felixProvisionalApis;
 import static org.junit.Assert.assertNotNull;
-import static org.ops4j.pax.exam.CoreOptions.equinox;
-import static org.ops4j.pax.exam.CoreOptions.felix;
-import static org.ops4j.pax.exam.CoreOptions.waitForFrameworkStartup;
+import static org.ops4j.pax.exam.CoreOptions.*;
 import static org.ops4j.pax.exam.OptionUtils.combine;
+import static org.ops4j.pax.exam.container.def.PaxRunnerOptions.scanFeatures;
 import static org.ops4j.pax.exam.container.def.PaxRunnerOptions.workingDirectory;
 
+import camel.business.Hello;
 import org.apache.felix.service.command.CommandProcessor;
 import org.apache.felix.service.command.CommandSession;
 import org.apache.karaf.testing.AbstractIntegrationTest;
@@ -44,35 +44,43 @@ public class FeaturesTest extends AbstractIntegrationTest {
         assertNotNull(getOsgiService(BlueprintContainer.class, "osgi.blueprint.container.symbolicname=org.apache.karaf.shell.obr", 20000));
         assertNotNull(getOsgiService(BlueprintContainer.class, "osgi.blueprint.container.symbolicname=org.apache.karaf.shell.wrapper", 20000));
         // Run some commands to make sure they are installed properly
+
+        Hello hello = getOsgiService(camel.business.Hello.class);
+        hello.hello();
         CommandProcessor cp = getOsgiService(CommandProcessor.class);
         CommandSession cs = cp.createSession(System.in, System.out, System.err);
+
         cs.execute("obr:listUrl");
         cs.execute("wrapper:install --help");
         cs.close();
     }
 
     @Configuration
-    public static Option[] configuration() throws Exception{
+    public static Option[] configuration() throws Exception {
         return combine(
-            // Default karaf environment
-            Helper.getDefaultOptions(
-                // this is how you set the default log level when using pax logging (logProfile)
-                Helper.setLogLevel("DEBUG")),
+                // Default karaf environment
+                Helper.getDefaultOptions(
+                        // this is how you set the default log level when using pax logging (logProfile)
+                        Helper.setLogLevel("DEBUG")),
 
-            // add two features
-            Helper.loadKarafStandardFeatures("obr", "wrapper"),
+                // add two features
+                Helper.loadKarafStandardFeatures("obr", "wrapper"),
+                scanFeatures(maven().groupId("camel").
+                        artifactId("jaxDemo").
+                        version("1.0.0").
+                        type("xml").
+                        classifier("features"), "jaxDemoFeature"),
+                workingDirectory("target/paxrunner/features/"),
 
-            workingDirectory("target/paxrunner/features/"),
+                waitForFrameworkStartup(),
 
-            waitForFrameworkStartup(),
+                // Test on both equinox and felix
+                // TODO: pax-exam does not support the latest felix version :-(
+                // TODO: so we use the higher supported which should be the same
+                // TODO: as the one specified in itests/dependencies/pom.xml
+                felix().version("3.0.2"),
 
-            // Test on both equinox and felix
-            // TODO: pax-exam does not support the latest felix version :-(
-            // TODO: so we use the higher supported which should be the same
-            // TODO: as the one specified in itests/dependencies/pom.xml
-             felix().version("3.0.2"),
-
-            felixProvisionalApis()
+                felixProvisionalApis()
         );
     }
 

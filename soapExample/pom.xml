@@ -7,7 +7,8 @@
     <artifactId>soapExample</artifactId>
     <version>1.0.0</version>
     <name>CXF :: Camel :: OSGi :: SOAP Service</name>
-    <description>CXF Consumer using the OSGi HTTP Service</description>
+    <description>CXF Consumer Endpoint using the OSGi HTTP Service</description>
+    <url>https://github.com/sistar/camel-examples</url>
     <packaging>bundle</packaging>
     <parent>
         <groupId>camel</groupId>
@@ -15,8 +16,8 @@
         <version>1.0.0</version>
     </parent>
     <properties>
-        <cxf-version>2.4.3</cxf-version>
-        <camel-version>2.8.2</camel-version>
+        <cxf.version>2.4.3</cxf.version>
+        <camel.version>2.8.2</camel.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -80,7 +81,7 @@
 			<plugin>
 				<groupId>org.apache.cxf</groupId>
 				<artifactId>cxf-codegen-plugin</artifactId>
-				<version>${cxf-version}</version>
+				<version>${cxf.version}</version>
 				<executions>
 					<execution>
 						<id>generate-sources</id>

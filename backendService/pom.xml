@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <artifactId>camelServiceExampleParent</artifactId>
+        <groupId>camel</groupId>
+        <version>1.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>backendService</artifactId>
+    <packaging>bundle</packaging>
+
+    <name>Blueprint :: Backend :: Service</name>
+    <url>https://github.com/sistar/camel-examples</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>2.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-blueprint</artifactId>
+            <version>2.8.2</version>
+        </dependency>
+        <dependency>
+               <groupId>org.apache.servicemix.bundles</groupId>
+               <artifactId>org.apache.servicemix.bundles.commons-dbcp</artifactId>
+               <version>${commons-dbcp-bundle-version}</version>
+           </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>3.4.0.GA</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <defaultGoal>install</defaultGoal>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+
+            <!-- to generate the MANIFEST-FILE of the bundle -->
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <version>2.3.4</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Bundle-SymbolicName>backendService</Bundle-SymbolicName>
+                        <Private-Package>camel.business.impl</Private-Package>
+                        <Import-Package>
+                            org.osgi.service.blueprint,
+                            org.apache.camel.osgi,
+                            javax.sql,
+                            oracle.jdbc.driver,
+                            oracle.jdbc,
+                            oracle.sql,
+                            org.apache.commons.dbcp,
+                            *
+                        </Import-Package>             <!-- org.apache.servicemix.common.osgi -->
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
+</project>
