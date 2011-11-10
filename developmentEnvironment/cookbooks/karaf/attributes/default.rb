@@ -1,0 +1,1 @@
+default[:karaf][:binaries] = "http://mirror.arcor-online.net/www.apache.org/karaf/2.2.4/apache-karaf-2.2.4.tar.gz"

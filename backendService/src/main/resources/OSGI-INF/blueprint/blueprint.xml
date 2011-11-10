@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:camel="http://camel.apache.org/schema/blueprint"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+           xsi:schemaLocation="
+       http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+       http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd
+
+       ">
+
+
+    <cm:property-placeholder persistent-id="com.opitz_consulting.cameldemo">
+        <cm:default-properties>
+            <cm:property name="database.driverClassName" value="oracle.jdbc.OracleDriver"/>
+
+        </cm:default-properties>
+            </cm:property-placeholder>
+
+    <bean id="myDs" class="org.apache.commons.dbcp.BasicDataSource"
+          destroy-method="close">
+        <property name="driverClassName" value="${database.driverClassName}"/>
+        <property name="url" value="${database.url}"/>
+        <property name="username" value="${database.user}"/>
+        <property name="password" value="${database.password}"/>
+    </bean>
+
+    <bean id="helloBean" class="camel.business.impl.HelloBean">
+        <property name="say" value="Hi from Camel"/>
+        <property name="ds" ref="myDs"/>
+    </bean>
+
+    <camelContext id="blueprintContext" trace="false" xmlns="http://camel.apache.org/schema/blueprint">
+            <route id="backendAsync">
+            <from uri="timer:foo?period=5000"/>
+            <setBody>
+                <method ref="helloBean" method="hello"/>
+            </setBody>
+
+            <log message="The message contains ${body}"/>
+            <to />
+        </route>
+    </camelContext>
+
+</blueprint>

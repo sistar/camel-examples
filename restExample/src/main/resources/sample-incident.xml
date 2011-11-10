@@ -1,0 +1,10 @@
+<rep:incident xmlns:rep="http://reportincident.example.camel.apache.org">
+  <incidentId>123</incidentId>
+  <incidentDate>string</incidentDate>
+  <givenName>string</givenName>
+  <familyName>string</familyName>
+  <summary>string</summary>
+  <details>string</details>
+  <email>string</email>
+  <phone>string</phone>
+</rep:incident>

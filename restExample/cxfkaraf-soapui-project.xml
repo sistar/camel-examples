@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="cxfkaraf" resourceRoot="${projectDir}" soapui-version="4.0.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="cxfkaraf" type="rest" basePath="/CxfRsRouterTest/rest" definitionUrl="http://localhost:8084/CxfRsRouterTest/rest/?_wadl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8084/CxfRsRouterTest/rest/?_wadl"><con:part><con:url>http://localhost:8084/CxfRsRouterTest/rest/?_wadl</con:url><con:content><![CDATA[<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:prefix1="http://reportincident.example.camel.apache.org">
+  <grammars>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://reportincident.example.camel.apache.org" xmlns:tns="http://reportincident.example.camel.apache.org">
+      <xs:element name="incident">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="incidentId" type="xs:string"/>
+            <xs:element name="incidentDate" type="xs:string"/>
+            <xs:element name="givenName" type="xs:string"/>
+            <xs:element name="familyName" type="xs:string"/>
+            <xs:element name="summary" type="xs:string"/>
+            <xs:element name="details" type="xs:string"/>
+            <xs:element name="email" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="incidents">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" ref="tns:incident"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="outputReportIncident">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="code" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="incidentType">
+        <xs:sequence>
+          <xs:element name="incidentId" type="xs:string"/>
+          <xs:element name="incidentDate" type="xs:string"/>
+          <xs:element name="givenName" type="xs:string"/>
+          <xs:element name="familyName" type="xs:string"/>
+          <xs:element name="summary" type="xs:string"/>
+          <xs:element name="details" type="xs:string"/>
+          <xs:element name="email" type="xs:string"/>
+          <xs:element name="phone" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </grammars>
+  <resources base="http://localhost:8084/CxfRsRouterTest/rest">
+    <resource path="/incidents">
+      <method name="GET">
+        <response>
+          <representation mediaType="application/xml" element="prefix1:incidents"/>
+        </response>
+      </method>
+      <method name="PUT">
+        <request>
+          <representation mediaType="application/xml" element="prefix1:incident"/>
+        </request>
+        <response>
+          <representation mediaType="application/xml" element="prefix1:outputReportIncident"/>
+        </response>
+      </method>
+      <resource path="/{id}">
+        <param name="id" style="template" type="xs:string"/>
+        <method name="GET">
+          <request/>
+          <response>
+            <representation mediaType="application/xml" element="prefix1:incident"/>
+          </response>
+        </method>
+      </resource>
+    </resource>
+  </resources>
+</application>]]></con:content><con:type>http://wadl.dev.java.net/2009/02</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8084</con:endpoint></con:endpoints><con:resource name="/incidents" path="/incidents"><con:settings/><con:parameters/><con:resource name="/{id}" path="/{id}"><con:settings/><con:parameters><con:parameter><con:name>id</con:name><con:value xsi:nil="true"/><con:style>TEMPLATE</con:style><con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type><con:default xsi:nil="true"/></con:parameter></con:parameters><con:method name="GET" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:rep="http://reportincident.example.camel.apache.org">rep:incident</con:element><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" mediaType="application/xml"><con:settings/><con:endpoint>http://localhost:8084</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:method name="GET" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:rep="http://reportincident.example.camel.apache.org">rep:incidents</con:element><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" mediaType="application/xml"><con:settings/><con:endpoint>http://localhost:8084</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request><con:request name="GET" mediaType="application/xml" accept="application/xml"><con:settings><con:setting id="AutoInferSchemas">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="PUT" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:rep="http://reportincident.example.camel.apache.org">rep:incident</con:element><con:description xsi:nil="true"/></con:representation><con:representation type="RESPONSE" id=""><con:mediaType>application/xml</con:mediaType><con:params/><con:element xmlns:rep="http://reportincident.example.camel.apache.org">rep:outputReportIncident</con:element><con:description xsi:nil="true"/></con:representation><con:request name="Request 1" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8084</con:endpoint><con:request/><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite name="cxfkaraf TestSuite"><con:description>TestSuite generated for REST Service [cxfkaraf]</con:description><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/incidents TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/incidents] located at [/incidents]</con:description><con:settings/><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="/{id} TestCase" searchProperties="true"><con:description>TestCase generated for REST Resource [/{id}] located at [/incidents/{id}]</con:description><con:settings/><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties><con:property><con:name>s</con:name></con:property></con:properties><con:wssContainer/></con:soapui-project>

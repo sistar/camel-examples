@@ -1,0 +1,32 @@
+require 'rubygems'
+require 'virtualbox'
+
+def host_ip()
+  VirtualBox::Global.global.host.network_interfaces.each do |ifce|
+    if ifce.interface_type == :host_only
+      return ifce.ip_address
+    end
+  end
+end
+
+Vagrant::Config.run do |config|
+  config.vm.box = "base"
+
+  config.vm.forward_port("karaf_remote_console", 8101, 48101)
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = "cookbooks"
+    chef.add_recipe "apt"
+    chef.add_recipe "java"
+    chef.add_recipe "karaf"
+    chef.json.merge!({
+                         :java => {
+                             :install_flavor => "sun"
+                         },
+                         :karaf => {
+                             :db_host => host_ip(),
+                             :db_user => "camel",
+                             :db_password => "demo"
+                         }
+                     })
+  end
+end
