@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features  name='jaxDemoRepository-${pom.version}' xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
-    <repository>mvn:org.apache.camel.karaf/apache-camel/2.8.2/xml/features</repository>
+    <repository>mvn:org.apache.camel.karaf/apache-camel/2.9.0-RC1/xml/features</repository>
     <feature name="jpa-hibernate-sistar" version="${pom.version}">
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-pool/${commons-pool.bundle.version}</bundle>
         <bundle dependency="true">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/${commons-dbcp-bundle-version}</bundle>

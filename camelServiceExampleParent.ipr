@@ -530,246 +530,246 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/apache/aries/org.apache.aries.util/0.3/org.apache.aries.util-0.3-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.camel:camel-blueprint:2.8.2">
+    <library name="Maven: org.apache.camel:camel-blueprint:2.9.0-RC1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-blueprint/2.8.2/camel-blueprint-2.8.2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-blueprint/2.9.0-RC1/camel-blueprint-2.9.0-RC1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-blueprint/2.8.2/camel-blueprint-2.8.2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-blueprint/2.9.0-RC1/camel-blueprint-2.9.0-RC1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-blueprint/2.8.2/camel-blueprint-2.8.2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-blueprint/2.9.0-RC1/camel-blueprint-2.9.0-RC1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.camel:camel-core-osgi:2.8.2">
+    <library name="Maven: org.apache.camel:camel-core-osgi:2.9.0-RC1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-osgi/2.8.2/camel-core-osgi-2.8.2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-osgi/2.9.0-RC1/camel-core-osgi-2.9.0-RC1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-osgi/2.8.2/camel-core-osgi-2.8.2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-osgi/2.9.0-RC1/camel-core-osgi-2.9.0-RC1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-osgi/2.8.2/camel-core-osgi-2.8.2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-osgi/2.9.0-RC1/camel-core-osgi-2.9.0-RC1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.camel:camel-core-xml:2.8.2">
+    <library name="Maven: org.apache.camel:camel-core-xml:2.9.0-RC1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-xml/2.8.2/camel-core-xml-2.8.2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-xml/2.9.0-RC1/camel-core-xml-2.9.0-RC1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-xml/2.8.2/camel-core-xml-2.8.2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-xml/2.9.0-RC1/camel-core-xml-2.9.0-RC1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-xml/2.8.2/camel-core-xml-2.8.2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core-xml/2.9.0-RC1/camel-core-xml-2.9.0-RC1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.camel:camel-core:2.8.2">
+    <library name="Maven: org.apache.camel:camel-core:2.9.0-RC1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core/2.8.2/camel-core-2.8.2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core/2.9.0-RC1/camel-core-2.9.0-RC1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core/2.8.2/camel-core-2.8.2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core/2.9.0-RC1/camel-core-2.9.0-RC1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core/2.8.2/camel-core-2.8.2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-core/2.9.0-RC1/camel-core-2.9.0-RC1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.camel:camel-cxf-transport:2.8.2">
+    <library name="Maven: org.apache.camel:camel-cxf-transport:2.9.0-RC1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf-transport/2.8.2/camel-cxf-transport-2.8.2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf-transport/2.9.0-RC1/camel-cxf-transport-2.9.0-RC1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf-transport/2.8.2/camel-cxf-transport-2.8.2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf-transport/2.9.0-RC1/camel-cxf-transport-2.9.0-RC1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf-transport/2.8.2/camel-cxf-transport-2.8.2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf-transport/2.9.0-RC1/camel-cxf-transport-2.9.0-RC1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.camel:camel-cxf:2.8.2">
+    <library name="Maven: org.apache.camel:camel-cxf:2.9.0-RC1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf/2.8.2/camel-cxf-2.8.2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf/2.9.0-RC1/camel-cxf-2.9.0-RC1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf/2.8.2/camel-cxf-2.8.2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf/2.9.0-RC1/camel-cxf-2.9.0-RC1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf/2.8.2/camel-cxf-2.8.2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-cxf/2.9.0-RC1/camel-cxf-2.9.0-RC1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.camel:camel-spring:2.8.2">
+    <library name="Maven: org.apache.camel:camel-spring:2.9.0-RC1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-spring/2.8.2/camel-spring-2.8.2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-spring/2.9.0-RC1/camel-spring-2.9.0-RC1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-spring/2.8.2/camel-spring-2.8.2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-spring/2.9.0-RC1/camel-spring-2.9.0-RC1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-spring/2.8.2/camel-spring-2.8.2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-spring/2.9.0-RC1/camel-spring-2.9.0-RC1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.camel:camel-test:2.8.2">
+    <library name="Maven: org.apache.camel:camel-test:2.9.0-RC1">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test/2.8.2/camel-test-2.8.2.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test/2.9.0-RC1/camel-test-2.9.0-RC1.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test/2.8.2/camel-test-2.8.2-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test/2.9.0-RC1/camel-test-2.9.0-RC1-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test/2.8.2/camel-test-2.8.2-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/camel/camel-test/2.9.0-RC1/camel-test-2.9.0-RC1-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-api:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-api:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-api/2.4.3/cxf-api-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-api/2.5.0/cxf-api-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-api/2.4.3/cxf-api-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-api/2.5.0/cxf-api-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-api/2.4.3/cxf-api-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-api/2.5.0/cxf-api-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-common-utilities:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-common-utilities:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-common-utilities/2.4.3/cxf-common-utilities-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-common-utilities/2.5.0/cxf-common-utilities-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-common-utilities/2.4.3/cxf-common-utilities-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-common-utilities/2.5.0/cxf-common-utilities-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-common-utilities/2.4.3/cxf-common-utilities-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-common-utilities/2.5.0/cxf-common-utilities-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-bindings-soap:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-bindings-soap:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-soap/2.4.3/cxf-rt-bindings-soap-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-soap/2.5.0/cxf-rt-bindings-soap-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-soap/2.4.3/cxf-rt-bindings-soap-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-soap/2.5.0/cxf-rt-bindings-soap-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-soap/2.4.3/cxf-rt-bindings-soap-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-soap/2.5.0/cxf-rt-bindings-soap-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-bindings-xml:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-bindings-xml:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-xml/2.4.3/cxf-rt-bindings-xml-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-xml/2.5.0/cxf-rt-bindings-xml-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-xml/2.4.3/cxf-rt-bindings-xml-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-xml/2.5.0/cxf-rt-bindings-xml-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-xml/2.4.3/cxf-rt-bindings-xml-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-bindings-xml/2.5.0/cxf-rt-bindings-xml-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-core:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-core:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-core/2.4.3/cxf-rt-core-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-core/2.5.0/cxf-rt-core-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-core/2.4.3/cxf-rt-core-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-core/2.5.0/cxf-rt-core-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-core/2.4.3/cxf-rt-core-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-core/2.5.0/cxf-rt-core-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-databinding-jaxb:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-databinding-jaxb:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/2.4.3/cxf-rt-databinding-jaxb-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/2.5.0/cxf-rt-databinding-jaxb-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/2.4.3/cxf-rt-databinding-jaxb-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/2.5.0/cxf-rt-databinding-jaxb-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/2.4.3/cxf-rt-databinding-jaxb-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-databinding-jaxb/2.5.0/cxf-rt-databinding-jaxb-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-frontend-jaxrs:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-frontend-jaxrs:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxrs/2.4.3/cxf-rt-frontend-jaxrs-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxrs/2.5.0/cxf-rt-frontend-jaxrs-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxrs/2.4.3/cxf-rt-frontend-jaxrs-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxrs/2.5.0/cxf-rt-frontend-jaxrs-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxrs/2.4.3/cxf-rt-frontend-jaxrs-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxrs/2.5.0/cxf-rt-frontend-jaxrs-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-frontend-jaxws:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-frontend-jaxws:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/2.4.3/cxf-rt-frontend-jaxws-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/2.5.0/cxf-rt-frontend-jaxws-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/2.4.3/cxf-rt-frontend-jaxws-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/2.5.0/cxf-rt-frontend-jaxws-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/2.4.3/cxf-rt-frontend-jaxws-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-jaxws/2.5.0/cxf-rt-frontend-jaxws-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-frontend-simple:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-frontend-simple:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-simple/2.4.3/cxf-rt-frontend-simple-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-simple/2.5.0/cxf-rt-frontend-simple-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-simple/2.4.3/cxf-rt-frontend-simple-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-simple/2.5.0/cxf-rt-frontend-simple-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-simple/2.4.3/cxf-rt-frontend-simple-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-frontend-simple/2.5.0/cxf-rt-frontend-simple-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-transports-common:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-transports-common:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-common/2.4.3/cxf-rt-transports-common-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-common/2.5.0/cxf-rt-transports-common-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-common/2.4.3/cxf-rt-transports-common-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-common/2.5.0/cxf-rt-transports-common-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-common/2.4.3/cxf-rt-transports-common-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-common/2.5.0/cxf-rt-transports-common-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-transports-http-jetty:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-transports-http-jetty:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http-jetty/2.4.3/cxf-rt-transports-http-jetty-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http-jetty/2.5.0/cxf-rt-transports-http-jetty-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http-jetty/2.4.3/cxf-rt-transports-http-jetty-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http-jetty/2.5.0/cxf-rt-transports-http-jetty-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http-jetty/2.4.3/cxf-rt-transports-http-jetty-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http-jetty/2.5.0/cxf-rt-transports-http-jetty-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-transports-http:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-transports-http:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/2.4.3/cxf-rt-transports-http-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/2.5.0/cxf-rt-transports-http-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/2.4.3/cxf-rt-transports-http-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/2.5.0/cxf-rt-transports-http-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/2.4.3/cxf-rt-transports-http-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-transports-http/2.5.0/cxf-rt-transports-http-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-rt-ws-addr:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-rt-ws-addr:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-ws-addr/2.4.3/cxf-rt-ws-addr-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-ws-addr/2.5.0/cxf-rt-ws-addr-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-ws-addr/2.4.3/cxf-rt-ws-addr-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-ws-addr/2.5.0/cxf-rt-ws-addr-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-ws-addr/2.4.3/cxf-rt-ws-addr-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-rt-ws-addr/2.5.0/cxf-rt-ws-addr-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
-    <library name="Maven: org.apache.cxf:cxf-tools-common:2.4.3">
+    <library name="Maven: org.apache.cxf:cxf-tools-common:2.5.0">
       <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-tools-common/2.4.3/cxf-tools-common-2.4.3.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-tools-common/2.5.0/cxf-tools-common-2.5.0.jar!/" />
       </CLASSES>
       <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-tools-common/2.4.3/cxf-tools-common-2.4.3-javadoc.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-tools-common/2.5.0/cxf-tools-common-2.5.0-javadoc.jar!/" />
       </JAVADOC>
       <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-tools-common/2.4.3/cxf-tools-common-2.4.3-sources.jar!/" />
+        <root url="jar://$MAVEN_REPOSITORY$/org/apache/cxf/cxf-tools-common/2.5.0/cxf-tools-common-2.5.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.apache.felix:org.apache.felix.bundlerepository:1.6.4">
@@ -1465,6 +1465,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-continuation/7.4.5.v20110725/jetty-continuation-7.4.5.v20110725-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.eclipse.jetty:jetty-continuation:7.5.3.v20111011">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-continuation/7.5.3.v20111011/jetty-continuation-7.5.3.v20111011.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-continuation/7.5.3.v20111011/jetty-continuation-7.5.3.v20111011-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-continuation/7.5.3.v20111011/jetty-continuation-7.5.3.v20111011-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.eclipse.jetty:jetty-http:7.4.5.v20110725">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/7.4.5.v20110725/jetty-http-7.4.5.v20110725.jar!/" />
@@ -1474,6 +1485,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/7.4.5.v20110725/jetty-http-7.4.5.v20110725-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.eclipse.jetty:jetty-http:7.5.3.v20111011">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/7.5.3.v20111011/jetty-http-7.5.3.v20111011.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/7.5.3.v20111011/jetty-http-7.5.3.v20111011-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-http/7.5.3.v20111011/jetty-http-7.5.3.v20111011-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.eclipse.jetty:jetty-io:7.4.5.v20110725">
@@ -1498,6 +1520,17 @@
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-security/7.4.5.v20110725/jetty-security-7.4.5.v20110725-sources.jar!/" />
       </SOURCES>
     </library>
+    <library name="Maven: org.eclipse.jetty:jetty-security:7.5.3.v20111011">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-security/7.5.3.v20111011/jetty-security-7.5.3.v20111011.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-security/7.5.3.v20111011/jetty-security-7.5.3.v20111011-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-security/7.5.3.v20111011/jetty-security-7.5.3.v20111011-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: org.eclipse.jetty:jetty-server:7.4.5.v20110725">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/7.4.5.v20110725/jetty-server-7.4.5.v20110725.jar!/" />
@@ -1507,6 +1540,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/7.4.5.v20110725/jetty-server-7.4.5.v20110725-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.eclipse.jetty:jetty-server:7.5.3.v20111011">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/7.5.3.v20111011/jetty-server-7.5.3.v20111011.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/7.5.3.v20111011/jetty-server-7.5.3.v20111011-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/jetty/jetty-server/7.5.3.v20111011/jetty-server-7.5.3.v20111011-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.eclipse.jetty:jetty-servlet:7.4.5.v20110725">
@@ -1551,17 +1595,6 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/osgi/3.6.2.R36x_v20110210/osgi-3.6.2.R36x_v20110210-sources.jar!/" />
-      </SOURCES>
-    </library>
-    <library name="Maven: org.fusesource.commonman:commons-management:1.0">
-      <CLASSES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fusesource/commonman/commons-management/1.0/commons-management-1.0.jar!/" />
-      </CLASSES>
-      <JAVADOC>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fusesource/commonman/commons-management/1.0/commons-management-1.0-javadoc.jar!/" />
-      </JAVADOC>
-      <SOURCES>
-        <root url="jar://$MAVEN_REPOSITORY$/org/fusesource/commonman/commons-management/1.0/commons-management-1.0-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.fusesource.jansi:jansi:1.4">

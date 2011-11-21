@@ -18,23 +18,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe0580c3-77f8-4408-8500-c9134ab91b37" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/camel-exception-handling-demo/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/camel-exception-handling-demo/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/camel-exception-handling-demo/src/test/java/camel/ExceptionHandlingTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/itests/src/main/resources/features.xml" />
-      <change type="DELETED" beforePath="D:\projekte\camel\camel-examples\backendService\src\test\java\camel\itests\DataSourceIT.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\projekte\camel\camel-examples\itests\itests.iml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backendService/pom.xml" afterPath="$PROJECT_DIR$/backendService/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/camelServiceExampleParent.ipr" afterPath="$PROJECT_DIR$/camelServiceExampleParent.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/camelServiceExampleParent.iws" afterPath="$PROJECT_DIR$/camelServiceExampleParent.iws" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itests/pom.xml" afterPath="$PROJECT_DIR$/itests/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itests/src/test/java/camel/business/impl/FeaturesTest.java" afterPath="$PROJECT_DIR$/itests/src/test/java/camel/business/impl/FeaturesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jaxDemo/src/main/resources/features.xml" afterPath="$PROJECT_DIR$/jaxDemo/src/main/resources/features.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restExample/pom.xml" afterPath="$PROJECT_DIR$/restExample/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/IncidentBusinessRules.java" afterPath="$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/IncidentBusinessRules.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/handlers/BadRequestResponseHandler.java" afterPath="$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/handlers/BadRequestResponseHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/ReportIncidentRestProxyRoutesClientTest.java" afterPath="$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/ReportIncidentRestProxyRoutesClientTest.java" />
-      <change type="MOVED" beforePath="D:\projekte\camel\camel-examples\backendService\backendService.iml" afterPath="$PROJECT_DIR$/camel-exception-handling-demo/camel-exception-handling-demo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soapClientExample/README.txt" afterPath="$PROJECT_DIR$/soapClientExample/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soapClientExample/pom.xml" afterPath="$PROJECT_DIR$/soapClientExample/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soapExample/README.txt" afterPath="$PROJECT_DIR$/soapExample/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soapExample/pom.xml" afterPath="$PROJECT_DIR$/soapExample/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soapExample/soapExample.iml" afterPath="$PROJECT_DIR$/soapExample/soapExample.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soapExample/src/main/resources/META-INF/spring/camel-context.xml" afterPath="$PROJECT_DIR$/soapExample/src/main/resources/META-INF/spring/camel-context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/soapExample/src/main/resources/features.xml" afterPath="$PROJECT_DIR$/soapExample/src/main/resources/features.xml" />
     </list>
     <list id="8ee67d90-52b1-4faa-bb3d-fb71ebe8c62a" name="Rejected commit: Default" comment="restExample runs on karaf 2.2.4&#10;" />
     <list id="3b2eecf6-45b1-449b-a6ce-265f8a41ed4c" name="added cxf endpoint to soapClient(cherry picked from commit 21f4becdae1c3bd86f2a4429442eeac4caa2c11d)" comment="" />
@@ -261,82 +256,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BadRequestResponseHandler.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/handlers/BadRequestResponseHandler.java">
+      <file leaf-file-name="camel-context.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/soapExample/src/main/resources/META-INF/spring/camel-context.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="32" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0">
+            <state line="19" column="75" selection-start="1196" selection-end="1241" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="features.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/soapExample/src/main/resources/features.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="60" selection-start="585" selection-end="871" vertical-scroll-proportion="0.8128342">
+            <state line="4" column="52" selection-start="278" selection-end="278" vertical-scroll-proportion="0.11584327">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportIncidentRestProxyRoutesClientTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/ReportIncidentRestProxyRoutesClientTest.java">
+      <file leaf-file-name="features.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itests/src/main/resources/features.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="13" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RestClientHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/RestClientHelper.java">
+      <file leaf-file-name="features.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itests/target/classes/features.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IncidentPutValidatorTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/IncidentPutValidatorTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="13" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restExample/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IncidentBusinessRules.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/IncidentBusinessRules.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportIncidentServiceResource.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/ReportIncidentServiceResource.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="0" selection-start="3095" selection-end="3095" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jaxDemo/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="612" selection-end="2429" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -345,7 +295,52 @@
       <file leaf-file-name="features.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jaxDemo/src/main/resources/features.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="145" selection-end="233" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/backendService/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="21" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/soapClientExample/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="21" selection-start="674" selection-end="674" vertical-scroll-proportion="-5.7777777">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/soapExample/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="21" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="result.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itests/result.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="515" column="153" selection-start="68224" selection-end="68224" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TEST-camel.business.impl.FeaturesTest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/itests/target/surefire-reports/TEST-camel.business.impl.FeaturesTest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="571" column="153" selection-start="107310" selection-end="107310" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -365,13 +360,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/backendService/pom.xml" />
-        <option value="$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/ReportIncidentRestProxyRoutesClientTest.java" />
-        <option value="$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/IncidentBusinessRules.java" />
-        <option value="D:/opensource/jboss-as-web-7.0.2.Final/standalone/configuration/standalone.xml" />
-        <option value="$PROJECT_DIR$/camel-exception-handling-demo/src/main/resources/OSGI-INF/blueprint/blueprint.xml" />
-        <option value="$PROJECT_DIR$/camel-exception-handling-demo/pom.xml" />
-        <option value="$PROJECT_DIR$/camel-exception-handling-demo/src/main/java/camel/HelloBean.java" />
         <option value="$PROJECT_DIR$/camel-exception-handling-demo/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/camel-exception-handling-demo/src/test/java/camel/ExceptionHandlingTest.java" />
         <option value="$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/handlers/BadRequestResponseHandler.java" />
@@ -381,6 +369,13 @@
         <option value="$PROJECT_DIR$/itests/src/main/resources/features.xml" />
         <option value="$PROJECT_DIR$/restExample/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/soapExample/src/main/resources/META-INF/spring/camel-context.xml" />
+        <option value="$PROJECT_DIR$/backendService/pom.xml" />
+        <option value="$PROJECT_DIR$/itests/result.txt" />
+        <option value="$PROJECT_DIR$/itests/target/surefire-reports/TEST-camel.business.impl.FeaturesTest.xml" />
+        <option value="$PROJECT_DIR$/soapClientExample/pom.xml" />
+        <option value="$PROJECT_DIR$/soapExample/pom.xml" />
+        <option value="$PROJECT_DIR$/soapExample/src/main/resources/features.xml" />
       </list>
     </option>
   </component>
@@ -406,42 +401,6 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="camel :: jax :: demo" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="camel :: exception :: handling :: demo" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="CXF :: Client :: Camel :: OSGi" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="CXF :: Camel :: Parent" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
@@ -459,6 +418,12 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Lifecycle" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
       </PATH>
     </treeState>
@@ -514,27 +479,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="restExample">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -543,18 +487,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="camelServiceExampleParent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="camel-examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -571,6 +506,26 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="camel-exception-handling-demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="restExample">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -637,24 +592,7 @@
       <recent name="org.apache.camel.example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FeaturesTest.testFeatures">
-    <configuration default="false" name="Rakefile" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="camelServiceExampleParent" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="true" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="jruby-1.6.4-p330" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="JRubyRunConfigurationExtension" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/Rakefile" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.All in soapExample">
     <configuration default="false" name="example1" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="jaxDemo" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -764,6 +702,29 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="All in soapExample" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" />
+      <module name="soapExample" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings">
@@ -813,6 +774,22 @@
         <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="packagepath" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -840,6 +817,24 @@
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpecsRunConfiguration" factoryName="Specs">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="packagepath" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="sysFilter" value=".*" />
+      <setting name="exampleFilter" value=".*" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -963,6 +958,22 @@
         <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
       </method>
     </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+        <option name="PhingTarget" enabled="false" />
+        <option name="SBT.BeforeRunTask" enabled="false" runInCurrentModule="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="" />
@@ -1007,12 +1018,12 @@
       <method />
     </configuration>
     <list size="6">
-      <item index="0" class="java.lang.String" itemvalue="Ruby.Rakefile" />
-      <item index="1" class="java.lang.String" itemvalue="Ruby.example1" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ReportIncidentRestProxyRoutesClientTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ExceptionHandlingTest" />
-      <item index="4" class="java.lang.String" itemvalue="Remote.Debug Karaf Rest Client" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.FeaturesTest.testFeatures" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.example1" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ReportIncidentRestProxyRoutesClientTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ExceptionHandlingTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FeaturesTest.testFeatures" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in soapExample" />
+      <item index="5" class="java.lang.String" itemvalue="Remote.Debug Karaf Rest Client" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -1079,31 +1090,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30420712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TunnelliJ" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TunnelliJ" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3969795" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279396" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4940669" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.407281" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2373247" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2373247" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.17811409" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2536193" sideWeight="0.69815415" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25921968" sideWeight="0.7001079" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26723677" sideWeight="0.67206043" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30184582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="850" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32602885" sideWeight="0.7001079" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29989213" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="91" y="91" width="1738" height="850" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3970421" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31161782" sideWeight="0.99037945" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31161782" sideWeight="0.99037945" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1195,86 +1206,108 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/itests/pom.xml">
+    <entry file="file://$PROJECT_DIR$/soapExample/target/generated/src/main/java/org/apache/camel/example/reportincident/InputReportIncident.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="19" selection-start="1986" selection-end="1986" vertical-scroll-proportion="2.1323252" />
+        <state line="48" column="13" selection-start="1683" selection-end="1683" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/soapClientExample/pom.xml">
+    <entry file="file://$PROJECT_DIR$/soapExample/src/main/java/org/example/reportincident/ReportIncidentRoutes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="20" selection-start="3108" selection-end="3108" vertical-scroll-proportion="0.9156415" />
+        <state line="32" column="40" selection-start="1335" selection-end="1335" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/itests/src/main/resources/features.xml">
+    <entry file="file://$PROJECT_DIR$/soapExample/src/test/java/org/example/reportincident/ReportIncidentRoutesClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.13761468" />
+        <state line="18" column="66" selection-start="865" selection-end="868" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_26/src.zip!/javax/annotation/Resources.java">
+    <entry file="file://$PROJECT_DIR$/soapExample/README.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="18" selection-start="417" selection-end="417" vertical-scroll-proportion="0.40358743" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/itests/src/test/java/camel/business/impl/FeaturesTest.java">
+    <entry file="file://$PROJECT_DIR$/soapExample/src/test/resources/camel-context.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="1" selection-start="4490" selection-end="4490" vertical-scroll-proportion="0.8088737" />
+        <state line="25" column="25" selection-start="1446" selection-end="1446" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jaxDemo/features/step_definitions/api_steps.rb">
+    <entry file="file://$PROJECT_DIR$/restExample/src/main/resources/OSGI-INF/blueprint/camel-context.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="3" selection-start="2405" selection-end="2405" vertical-scroll-proportion="0.0" />
+        <state line="19" column="49" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/handlers/BadRequestResponseHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="778" selection-end="778" vertical-scroll-proportion="0.0" />
+    <entry file="file://$PROJECT_DIR$/soapExample/src/main/resources/META-INF/spring/camel-context.xml">
+      <provider editor-type-id="com.intellij.spring.perspectives.SpringBeansStructureEditorProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/ReportIncidentRestProxyRoutesClientTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="641" selection-end="641" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/RestClientHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restExample/src/test/java/org/apache/camel/example/IncidentPutValidatorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/IncidentBusinessRules.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restExample/src/main/java/org/apache/camel/example/ReportIncidentServiceResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="3095" selection-end="3095" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jaxDemo/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="612" selection-end="2429" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jaxDemo/src/main/resources/features.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="145" selection-end="233" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/restExample/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1752" selection-end="1752" vertical-scroll-proportion="0.0">
+        <state line="19" column="75" selection-start="1196" selection-end="1241" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/itests/src/main/resources/features.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="60" selection-start="585" selection-end="871" vertical-scroll-proportion="0.8128342">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itests/target/classes/features.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jaxDemo/src/main/resources/features.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backendService/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="21" selection-start="971" selection-end="971" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itests/result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="515" column="153" selection-start="68224" selection-end="68224" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/itests/target/surefire-reports/TEST-camel.business.impl.FeaturesTest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="571" column="153" selection-start="107310" selection-end="107310" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soapClientExample/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="21" selection-start="674" selection-end="674" vertical-scroll-proportion="-5.7777777">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soapExample/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="21" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/soapExample/src/main/resources/features.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="52" selection-start="278" selection-end="278" vertical-scroll-proportion="0.11584327">
           <folding />
         </state>
       </provider>
@@ -1332,7 +1365,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>soapClientExample</last-edited>
+          <last-edited>soapExample</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
