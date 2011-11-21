@@ -7,6 +7,6 @@ public class IncidentBusinessRules {
     }
 
     boolean removeAllowed(Incident incident) {
-        return incident.getStatus() == "open";
+        return incident.getStatus().equals("open");
     }
 }

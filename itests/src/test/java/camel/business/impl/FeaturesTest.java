@@ -33,7 +33,12 @@ import org.junit.runner.RunWith;
 import org.ops4j.pax.exam.Option;
 import org.ops4j.pax.exam.junit.Configuration;
 import org.ops4j.pax.exam.junit.JUnit4TestRunner;
+import org.osgi.framework.ServiceReference;
 import org.osgi.service.blueprint.container.BlueprintContainer;
+import org.osgi.service.cm.ConfigurationAdmin;
+
+import java.util.Dictionary;
+import java.util.Properties;
 
 @RunWith(JUnit4TestRunner.class)
 public class FeaturesTest extends AbstractIntegrationTest {
@@ -41,9 +46,22 @@ public class FeaturesTest extends AbstractIntegrationTest {
     @Test
     public void testFeatures() throws Exception {
         // Make sure the command services are available
-        assertNotNull(getOsgiService(BlueprintContainer.class, "osgi.blueprint.container.symbolicname=org.apache.karaf.shell.obr", 20000));
-        assertNotNull(getOsgiService(BlueprintContainer.class, "osgi.blueprint.container.symbolicname=org.apache.karaf.shell.wrapper", 20000));
-        // Run some commands to make sure they are installed properly
+        assertNotNull(getOsgiService(BlueprintContainer.class,
+                "osgi.blueprint.container.symbolicname=org.apache.karaf.shell.obr", 20000));
+        assertNotNull(getOsgiService(BlueprintContainer.class,
+                "osgi.blueprint.container.symbolicname=org.apache.karaf.shell.wrapper", 20000));
+
+        ConfigurationAdmin configurationAdmin = getOsgiService(ConfigurationAdmin.class);
+        org.osgi.service.cm.Configuration conf = configurationAdmin.getConfiguration("com.opitz_consulting.cameldemo", null);
+        Dictionary<Object, Object> props = conf.getProperties();
+        if (props == null) {
+            props = new Properties();
+        }
+
+        props.put("database.url", "jdbc:oracle:thin:camel/demo@localhost:1521/orcl");
+        props.put("database.user", "camel");
+        props.put("database.password", "demo");
+
 
         Hello hello = getOsgiService(camel.business.Hello.class);
         hello.hello();
@@ -66,12 +84,12 @@ public class FeaturesTest extends AbstractIntegrationTest {
                 // add two features
                 Helper.loadKarafStandardFeatures("obr", "wrapper"),
                 scanFeatures(maven().groupId("camel").
-                        artifactId("jaxDemo").
+                        artifactId("itests").
                         version("1.0.0").
                         type("xml").
-                        classifier("features"), "jaxDemoFeature"),
-                workingDirectory("target/paxrunner/features/"),
-
+                        classifier("features"), "jaxDemoItestFeature"),
+                workingDirectory("target/paxrunner/features/")
+                ,
                 waitForFrameworkStartup(),
 
                 // Test on both equinox and felix

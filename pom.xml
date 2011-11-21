@@ -11,12 +11,13 @@
     <packaging>pom</packaging>
     <modules>
         <module>soapExample</module>
-        <module>soapClientExample</module>
+       <!-- <module>soapClientExample</module>
         <module>restExample</module>
         <module>custom-authentication</module>
         <module>backendService</module>
         <module>jaxDemo</module>
         <module>itests</module>
+        <module>camel-exception-handling-demo</module>-->
     </modules>
     <properties>
         <felix.prefs.version>1.0.4</felix.prefs.version>
@@ -151,6 +152,11 @@
             </dependency>
             <dependency>
                 <groupId>org.apache.camel</groupId>
+                <artifactId>camel-blueprint</artifactId>
+                <version>${camel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.camel</groupId>
                 <artifactId>camel-cxf</artifactId>
                 <version>${camel.version}</version>
             </dependency>
@@ -175,6 +181,7 @@
                 <version>${cxf.version}</version>
                 <scope>test</scope>
             </dependency>
+
             <!-- logging -->
             <dependency>
                 <groupId>org.slf4j</groupId>

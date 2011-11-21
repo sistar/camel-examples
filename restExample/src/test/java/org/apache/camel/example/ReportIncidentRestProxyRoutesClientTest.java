@@ -12,7 +12,8 @@ import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * Unit test for Restful CRUD Webservice
+ * Integration test for Restful CRUD Webservice
+ * Will bring up a CXF-RS Server
  */
 public class ReportIncidentRestProxyRoutesClientTest extends CamelSpringTestSupport {
 

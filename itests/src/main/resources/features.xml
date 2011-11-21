@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features  name='jaxDemoItestRepository-${pom.version}'
+           xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+    <repository>mvn:camel/jaxDemo/${pom.version}/xml/features</repository>
+    <feature name="jaxDemoItestFeature" version="${pom.version}">
+        <feature>jaxDemoFeature</feature>
+        <config name="com.opitz_consulting.cameldemo">
+            database.driverClassName = oracle.jdbc.OracleDriver
+            database.url = jdbc:oracle:thin:camel/demo@localhost:1521/orcl
+            database.user = camel
+            database.password = demo
+        </config>
+    </feature>
+</features>
