@@ -1,4 +1,4 @@
-CXF OSGI Example
+CXF OSGI Example (modified by rsi)
 ================
 
 A simple example which receives web service calls (via a CXF consumer, using bean binding)
@@ -30,7 +30,7 @@ To run the example on Apache ServiceMix 4.x or Apache Karaf 2.2.x
  com.sun.org.apache.xerces.internal.dom, \
  com.sun.org.apache.xerces.internal.jaxp, \
 
-  2) Add features required
+  2) Add features required -- *not needed as our feature allready depends on all needed features*
   features:addUrl mvn:org.apache.camel.karaf/apache-camel/2.9.0-RC1/xml/features
   features:install war
   features:install camel-spring
